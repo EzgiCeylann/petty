@@ -38,9 +38,9 @@ public class HomeActivity extends AppCompatActivity {
         btnSick.setOnClickListener(v -> openSubQuestion("Hasta/Halsiz"));
         btnAngry.setOnClickListener(v -> {
             if (petType.equals("dog")) {
-                openSubQuestion("Kizgin/Huysuz");
+                openSubQuestion("Kızgın/Huysuz");
             } else {
-                openQuestion("Kizgin/Huysuz", null);
+                openQuestion("Kızgın/Huysuz", null);
             }
         });
 
