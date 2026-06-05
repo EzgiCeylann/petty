@@ -11,62 +11,64 @@ public class CatRecommendationStrategy implements RecommendationStrategy {
 
         switch (behavior) {
             case "Yorgun":
-                return "• Allow your cat to rest in a quiet and comfortable place.\n" +
-                        "• Ensure easy access to clean water.\n" +
-                        "• Give your cat space to rest on its own without disturbing it.\n" +
-                        "• Pause play and physical activities.\n" +
-                        "• Provide a cool environment if it is too warm.\n" +
-                        "• Keep its bed or favorite blanket nearby.\n" +
-                        "• Observe whether its energy returns after resting. Monitor its appetite and water intake.\n" +
-                        "⚠️ If your cat appears lethargic for a long time or refuses to get up, consult a veterinarian.\n" +
-                        "⚠️ If lethargy is accompanied by vomiting, diarrhea, or changes in breathing, seek veterinary attention immediately.";
+                return "• Kedinizin sessiz ve rahat bir yerde dinlenmesine izin verin.\n" +
+                        "• Temiz suya kolay ulaşmasını sağlayın.\n" +
+                        "• Üzerine gitmeden kendi kendine dinlenmesine fırsat verin.\n" +
+                        "• Oyun ve fiziksel aktiviteye ara verin.\n" +
+                        "• Çok sıcaksa serin bir ortam sağlayın.\n" +
+                        "• Yatağını ya da sevdiği battaniyesini yakınında tutun.\n" +
+                        "• Dinlendikten sonra enerjisinin geri gelip gelmediğini gözlemleyin. İştahını ve su içmesini takip edin.\n" +
+                        "⚠️ Uzun süre halsiz görünüyorsa ya da ayağa kalkmak istemiyorsa veterinere başvurun.\n" +
+                        "⚠️ Halsizliğe kusma, ishal veya nefes değişikliği eşlik ediyorsa vakit kaybetmeden veterinere gidin.";
 
             case "Hasta/Halsiz":
-                if (subReason == null) return "• Monitor your cat's general condition closely.\n" +
-                        "• Ensure access to clean water and a comfortable resting place.\n" +
-                        "• Check whether your cat is eating and drinking normally.\n" +
-                        "• If your cat's condition does not improve within 24 hours or worsens, consult a veterinarian.\n" +
-                        "⚠️ If you observe any extreme symptoms such as difficulty breathing, collapse, or seizures, take your cat to the veterinarian immediately.";                switch (subReason) {
+                if (subReason == null)
+                    return "• Kedinizin genel durumunu yakından takip edin.\n" +
+                            "• Temiz su ve rahat bir dinlenme alanı sağlayın.\n" +
+                            "• Normal yiyip içip içmediğini kontrol edin.\n" +
+                            "• 24 saat içinde durumu düzelmezse ya da kötüleşirse veterinere başvurun.\n" +
+                            "⚠️ Nefes darlığı, bayılma veya nöbet gibi aşırı belirtiler gözlemlerseniz kedinizi derhal veterinere götürün.";
+                switch (subReason) {
                     case "Sindirimsel":
-                        return "• Keep clean water accessible to your cat today.\n" +
-                                "• Think about what your cat has eaten in the last 24 hours and take notes.\n" +
-                                "• Check the litter box.\n" +
-                                "⚠️ If you notice any abnormality, you should contact your veterinarian.";
+                        return "• Bugün temiz suyu kedinize erişilebilir tutun.\n" +
+                                "• Son 24 saat içerisinde ne yediğini düşünün, not alın.\n" +
+                                "• Kumunu kontrol edin.\n" +
+                                "⚠️ Bir anormallik fark ederseniz veterinerinizle iletişime geçmelisiniz.";
                     case "Stres":
-                        return "• Create a quiet and safe space for your cat.\n" +
-                                "• Keep its favorite toy or blanket nearby.\n" +
-                                "• If it does not want to be petted, give it some distance. If it is being clingy, stay by its side.\n" +
-                                "⚠️ If you notice any abnormality, you should contact your veterinarian.";
+                        return "• Sessiz, güvenli bir alan oluşturun.\n" +
+                                "• Sevdiği bir oyuncak veya battaniyesini yanında tutun.\n" +
+                                "• Sevilmek istemiyorsa biraz mesafe tanıyın. Sırnaşıyorsa yanında olun.\n" +
+                                "⚠️ Bir anormallik fark ederseniz veterinerinizle iletişime geçmelisiniz.";
                     case "Yaralanma":
-                        return "• If there is bleeding, apply gentle pressure with a clean cloth and take your cat to the vet immediately.\n" +
-                                "• Do not try to give your cat medications intended for humans.\n" +
-                                "• Observe without forcing interaction.\n" +
-                                "⚠️ In extreme cases, take your cat to the veterinarian immediately. If your cat's condition does not improve or worsens, do not waste time consulting your veterinarian.";
+                        return "• Kanama varsa hafifçe bir bezle baskı yapın ve derhal veterinere götürün.\n" +
+                                "• İnsanlara özgü ilaçları kedinize vermeye çalışmayın.\n" +
+                                "• Zorlamadan gözlem yapın.\n" +
+                                "⚠️ Ekstrem durumlarda kedinizi derhal veterinere götürün. Durumu iyileşmiyor ya da kötüleşiyorsa vakit kaybetmeden veterinerinize danışın.";
                     case "Enfeksiyon":
-                        return "• Sneezing, eye discharge, sensation of fever, and lethargy may be signs of infection.\n" +
-                                "• Keep the environment warm and comfortable, encourage water intake, and monitor appetite.\n" +
-                                "• If your cat has not eaten for 1 full day, contact your veterinarian.\n" +
-                                "⚠️ In extreme cases, take your cat to the veterinarian immediately. If your cat's condition does not improve or worsens, do not waste time consulting your veterinarian.";
+                        return "• Hapşırma, göz akıntısı, ateş hissi ve halsizlik enfeksiyon belirtisi olabilir.\n" +
+                                "• Ortamı sıcak ve rahat tutun, su içmesini teşvik edin, iştahını gözlemleyin.\n" +
+                                "• 1 gün boyunca ciddi şekilde iştahsızsa veterinerinizle iletişime geçin.\n" +
+                                "⚠️ Ekstrem durumlarda kedinizi derhal veterinere götürün. Durumu iyileşmiyor ya da kötüleşiyorsa vakit kaybetmeden veterinerinize danışın.";
                     default:
-                        return "Continue observing your cat.";
+                        return "Kedinizi gözlemlemeye devam edin.";
                 }
 
             case "Oyuncu":
-                return "• You can play chase inside your home, or use a soft ball or feather toy to play with your cat.\n" +
-                        "• If you have a laser toy, you can let your cat chase it to help release its energy.\n" +
-                        "• A cat tree is ideal for cats to release energy and trim their claws at the same time. If you do not have one, definitely consider getting one. 🐾";
+                return "• Evinizin içerisinde kovalamaca oynayabilir, yumuşak bir topla veya tüylü bir oyuncakla onu oylatabilirsiniz.\n" +
+                        "• Lazer oyuncağınız varsa bunu takip etmesini sağlayabilir, bu şekilde enerjisini atmasını sağlayabilirsiniz.\n" +
+                        "• Tırmanma ağacı kedilerin enerjisini atması ve tırnaklarını törpülemeleri için çok idealdir. Tırmanma ağacınız yoksa bu seçeneği kesinlikle değerlendirin. 🐾";
 
-            case "Kizgin/Huysuz":
-                return "• Cats can sometimes act irritable on days when they feel stressed, energetic, or uncomfortable. Giving them space without forcing interaction, playing a short game, and checking their food, water, and litter box routine can help.\n" +
-                        "• If your cat is normally calm but has suddenly become aggressive, it may also have a physical discomfort.\n" +
-                        "• If you think there is a physical issue, you can select the Sick/Lethargic option to receive recommendations, or contact your veterinarian directly.";
+            case "Kızgın/Huysuz":
+                return "• Kediler bazen stresli, enerjik ya da rahatsız hissettikleri günlerde huysuz davranabiliyor. Zorlamadan biraz alan vermek, kısa bir oyun oynatmak ve mama-su-kum düzenini kontrol etmek iyi gelebilir.\n" +
+                        "• Normalde sakin bir kediyse ve aniden agresifleştiyse fiziksel bir rahatsızlığı da olabilir.\n" +
+                        "• Fiziksel bir rahatsızlığı olduğunu düşünüyorsanız Hasta/Halsiz seçeneğini işaretleyip öneriler alabilir ya da doğrudan veterinerinizle iletişime geçebilirsiniz.";
 
             case "Sakin/Mutlu":
-                return "• Great! Your cat is feeling very well today. 🐱\n" +
-                        "• Enjoy this wonderful moment together.";
+                return "• Harika! Kediniz bugün çok iyi hissediyor. 🐱\n" +
+                        "• Bu güzel anın tadını çıkarın.";
 
             default:
-                return "Continue observing your cat.";
+                return "Kedinizi gözlemlemeye devam edin.";
         }
     }
 }

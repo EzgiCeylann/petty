@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SubQuestionActivity extends AppCompatActivity {
 
     private String behavior, petName, petType;
-    private boolean showingYesNo = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +45,10 @@ public class SubQuestionActivity extends AppCompatActivity {
             btnOption1.setText("Stres/Korku");
             btnOption2.setText("Aşırı Uyarılma");
             btnOption3.setText("Ağrı/Hastalık");
+<<<<<<< feature/esat-patterns
+            btnOption3.setVisibility(View.VISIBLE);
+=======
+>>>>>>> main
             btnOption4.setVisibility(View.GONE);
 
             btnOption1.setOnClickListener(v -> openRecommendation("Stres/Korku"));
