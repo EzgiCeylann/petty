@@ -39,11 +39,11 @@ public class OnboardingActivity extends AppCompatActivity {
         btnContinue.setOnClickListener(v -> {
             String petName = etPetName.getText().toString().trim();
             if (selectedPetType.isEmpty()) {
-                Toast.makeText(this, "Lutfen bir hayvan secin!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Lütfen bir hayvan seçin!", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (petName.isEmpty()) {
-                Toast.makeText(this, "Lutfen hayvaninizin adini girin!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Lütfen hayvanınızın adını girin!", Toast.LENGTH_SHORT).show();
                 return;
             }
             SharedPreferences prefs = getSharedPreferences("petty_prefs", MODE_PRIVATE);

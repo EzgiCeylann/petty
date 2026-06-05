@@ -48,7 +48,7 @@ public class ReportActivity extends AppCompatActivity {
                 tvWeeklyReport.setText("Bu hafta henüz veri girilmedi.");
             } else {
                 StringBuilder sb = new StringBuilder();
-                sb.append("Toplam kayit: ").append(logs.size()).append("\n\n");
+                sb.append("Toplam kayıt: ").append(logs.size()).append("\n\n");
                 for (BehaviorLog log : logs) {
                     sb.append("• ").append(log.getBehavior());
                     if (log.getSubReason() != null) {

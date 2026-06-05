@@ -32,25 +32,25 @@ public class SubQuestionActivity extends AppCompatActivity {
         Button btnOption4 = findViewById(R.id.btnOption4);
 
         if (behavior.equals("Hasta/Halsiz")) {
-            tvSubQuestion.setText("Halsizligine yol acabilecek bir sebep var mi?");
+            tvSubQuestion.setText("Halsizliğine yol açabilecek bir sebep var mı?");
             btnOption1.setText("Evet");
-            btnOption2.setText("Hayir");
+            btnOption2.setText("Hayır");
             btnOption3.setVisibility(View.GONE);
             btnOption4.setVisibility(View.GONE);
 
             btnOption1.setOnClickListener(v -> showSubReasonQuestion());
             btnOption2.setOnClickListener(v -> openRecommendation(null));
 
-        } else if (behavior.equals("Kizgin/Huysuz")) {
+        } else if (behavior.equals("Kızgın/Huysuz")) {
             tvSubQuestion.setText("Neden kaynaklanıyor?");
             btnOption1.setText("Stres/Korku");
-            btnOption2.setText("Asiri Uyarilma");
-            btnOption3.setText("Agri/Hastalik");
+            btnOption2.setText("Aşırı Uyarılma");
+            btnOption3.setText("Ağrı/Hastalık");
             btnOption4.setVisibility(View.GONE);
 
             btnOption1.setOnClickListener(v -> openRecommendation("Stres/Korku"));
-            btnOption2.setOnClickListener(v -> openRecommendation("Asiri Uyarilma"));
-            btnOption3.setOnClickListener(v -> openRecommendation("Agri/Hastalik"));
+            btnOption2.setOnClickListener(v -> openRecommendation("Aşırı Uyarılma"));
+            btnOption3.setOnClickListener(v -> openRecommendation("Ağrı/Hastalık"));
         }
     }
 
