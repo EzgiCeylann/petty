@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import com.petty.app.database.PetRepository;
 import com.petty.app.manager.BehaviorLogManager;
 import com.petty.app.model.BehaviorLog;
 
@@ -36,6 +37,10 @@ public class RecommendationActivity extends AppCompatActivity {
 
         String recommendation = manager.logBehavior(log);
         tvRecommendation.setText(recommendation);
+
+        PetRepository repository = new PetRepository(this);
+        log.setRecommendation(recommendation);
+        repository.insertLog(log);
 
         btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(this, HomeActivity.class);
