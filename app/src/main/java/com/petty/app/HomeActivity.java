@@ -22,8 +22,8 @@ public class HomeActivity extends AppCompatActivity {
 
         TextView tvGreeting = findViewById(R.id.tvGreeting);
         TextView tvQuestion = findViewById(R.id.tvQuestion);
-        tvGreeting.setText("Hosgeldin!");
-        tvQuestion.setText("Bugun " + petName + " nasil?");
+        tvGreeting.setText("Hoşgeldin!");
+        tvQuestion.setText("Bugün " + petName + " nasıl?");
 
         Button btnTired = findViewById(R.id.btnTired);
         Button btnSick = findViewById(R.id.btnSick);
